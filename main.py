@@ -22,6 +22,7 @@ def get_all_devices():
     devices = Device01.objects().to_json()
     devices_list = json.loads(devices)
 
+
     # print(type(devices_list))
     # print(type(devices))
     # print(devices)
