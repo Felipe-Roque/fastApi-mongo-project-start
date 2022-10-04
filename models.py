@@ -2,12 +2,12 @@ from mongoengine import Document, StringField, IntField, DateTimeField, FloatFie
 
 
 class Device01(Document): #leituras de alguma coisa
-    id_tago = ObjectIdField()
+    id_tago = StringField()
     time = DateTimeField()
     unit = StringField()
     value = FloatField()
     variable = StringField()
     metadata = DictField()
-    group = ObjectIdField()
-    device = ObjectIdField()
+    group = StringField()
+    device = StringField()
     test = ListField()
