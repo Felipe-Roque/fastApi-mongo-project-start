@@ -44,7 +44,6 @@ class NewDeviceData(BaseModel):
     metadata: dict
     group: str
     device: str
-    test: list
 
 @app.post("/add_DeviceData")
 def add_add_DeviceData(oDevice: NewDeviceData):
@@ -55,8 +54,7 @@ def add_add_DeviceData(oDevice: NewDeviceData):
                                variable=oDevice.variable,
                                metadata=oDevice.metadata,
                                group=oDevice.group,
-                               device=oDevice.device,
-                               test=oDevice.test)
+                               device=oDevice.device)
     new_device_data.save()
 
     return {"message":"device data added successsufully!"}

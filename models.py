@@ -10,4 +10,3 @@ class Device01(Document): #leituras de alguma coisa
     metadata = DictField()
     group = StringField()
     device = StringField()
-    test = ListField()
